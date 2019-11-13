@@ -15,10 +15,10 @@ namespace Kanji.Interface.ViewModels
     {
         #region Fields
 
-        private int _kanjiReadingColumn;
+        private int _kanjiReadingColumn = 0;
         private int _acceptedReadingsColumn;
-        private int _acceptedMeaningsColumn;
-        private int _itemTypeColumn;
+        private int _acceptedMeaningsColumn = 2;
+        private int _itemTypeColumn = 3;
         private int _meaningNotesColumn;
         private int _readingNotesColumn;
         private int _tagsColumn;
@@ -337,19 +337,9 @@ namespace Kanji.Interface.ViewModels
 
                 // Find readings.
                 entry.Readings = ReadAcceptedReadings(row);
-                if (string.IsNullOrEmpty(entry.Readings))
-                {
-                    log.Append("Empty readings. Skipping.");
-                    return null;
-                }
 
                 // Find meanings.
                 entry.Meanings = ReadAcceptedMeanings(row);
-                if (string.IsNullOrEmpty(entry.Meanings))
-                {
-                    log.Append("Empty meanings. Skipping.");
-                    return null;
-                }
 
                 // Find all optional info.
                 entry.MeaningNote = ReadMeaningNotes(row);
@@ -433,7 +423,7 @@ namespace Kanji.Interface.ViewModels
         {
             if (row.Count - 1 >= _acceptedMeaningsColumn)
             {
-                return row[_acceptedMeaningsColumn];
+                return row[_acceptedMeaningsColumn - 1];
             }
 
             return string.Empty;

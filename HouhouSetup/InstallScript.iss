@@ -1,6 +1,6 @@
 ﻿[Setup]
 AppName=Houhou SRS
-AppVersion=1.3
+AppVersion=1.3.1
 DefaultDirName={pf}\Houhou SRS
 DefaultGroupName=Houhou SRS
 UninstallDisplayIcon={app}\Houhou.exe

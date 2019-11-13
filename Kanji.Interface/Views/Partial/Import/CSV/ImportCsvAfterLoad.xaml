@@ -62,16 +62,16 @@
 
                             <StackPanel Grid.Column="1" Style="{StaticResource FieldStackPanel}">
                                 <TextBlock Style="{StaticResource LegendText}">
-                                    * Accepted readings
+                                    Accepted readings
                                 </TextBlock>
-                                <ComboBox Style="{StaticResource RequiredFieldComboBox}" ItemsSource="{Binding RequiredColumns}" SelectedIndex="{Binding AcceptedReadingsColumn, Mode=TwoWay}" />
+                                <ComboBox Style="{StaticResource FieldComboBox}" ItemsSource="{Binding OptionalColumns}" SelectedIndex="{Binding AcceptedReadingsColumn, Mode=TwoWay}" />
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Style="{StaticResource FieldStackPanel}">
                                 <TextBlock Style="{StaticResource LegendText}">
-                                    * Accepted meanings
+                                    Accepted meanings
                                 </TextBlock>
-                                <ComboBox Style="{StaticResource RequiredFieldComboBox}" ItemsSource="{Binding RequiredColumns}" SelectedIndex="{Binding AcceptedMeaningsColumn, Mode=TwoWay}" />
+                                <ComboBox Style="{StaticResource FieldComboBox}" ItemsSource="{Binding OptionalColumns}" SelectedIndex="{Binding AcceptedMeaningsColumn, Mode=TwoWay}" />
                             </StackPanel>
 
                             <StackPanel Grid.Row="1" Grid.Column="1" Style="{StaticResource FieldStackPanel}">
